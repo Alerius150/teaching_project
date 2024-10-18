@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:32,height:32/https://www.filepicker.io/api/file/9OxlMI8TjGM2W6ELElMd'
+          rel='icon' type='image/png'>
+
+    <link href='https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:72,height:72/https://www.filepicker.io/api/file/9OxlMI8TjGM2W6ELElMd'
+          rel='apple-touch-icon' type='image/png'>
+
+    <link href='https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:144,height:144/https://www.filepicker.io/api/file/9OxlMI8TjGM2W6ELElMd'
+          rel='apple-touch-icon' type='image/png'>
+
+    <link href='https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:320,height:345/https://www.filepicker.io/api/file/6zhFyn86QRiFf5LTgQ0F'
+          rel='apple-touch-startup-image' type='image/png'>
+
+    <link href='https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:640,height:690/https://www.filepicker.io/api/file/6zhFyn86QRiFf5LTgQ0F'
+          rel='apple-touch-startup-image' type='image/png'>
+
+    <meta name='apple-mobile-web-app-capable' content='yes'/>
+    <meta charset="UTF-8">
+    <meta name="csrf-param" content="authenticity_token"/>
+    <meta name="csrf-token"
+          content="OPIzRL0Fc2whq9TV2/AiMTIfu+tEZvJkqnecKOJJ0inbM3rKKP1hIbmEI8X2uN8cyOk2LRL9FZLbo0OI2HpfEg=="/>
+    <link rel="stylesheet" media="screen"
+          href="https://fedora.teachablecdn.com/assets/bootstrap-a14e0219bff457941c01e229139fcb9f4709e289d96efa3a24bad96561d56e6c.css"
+          data-turbolinks-track="true"/>
+    <link href="https://themes2.teachablecdn.com/themecss/production/base.css?_=53f6dccfab71&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23191919&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23707070&amp;brand_navbar_text=%23707070&amp;brand_primary=%23ffffff&amp;brand_secondary=%23CB46D3&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.0&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F6zhFyn86QRiFf5LTgQ0F"
+          rel="stylesheet" data-turbolinks-track="true"></link>
+    <title th:text="${course.getName()}"></title>
+    <meta name="description" content="Learn to make your JavaScript applications scale">
+    <link rel="canonical" href="https://codewithmosh.com/p/the-ultimate-typescript">
+    <meta property="og:description" content="Learn to make your JavaScript applications scale">
+    <meta property="og:image"
+          content="https://file-uploads.teachablecdn.com/4c16c4adca0d401bb4295cfbda05ecf1/e1c0e6c521414dbfae2fe1ca931c2f8f">
+    <meta property="og:title" content="The Ultimate TypeScript Course">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codewithmosh.com/p/the-ultimate-typescript">
+    <meta name="brand_video_player_color" content="#CB46D3">
+    <meta name="site_title" content="Code with Me">
+    <style></style>
+    <script src='//fast.wistia.com/assets/external/E-v1.js'></script>
+    <!--    <script src='https://www.recaptcha.net/recaptcha/api.js' async defer></script>-->
+
+
+    <meta name="asset_host" content="https://fedora.teachablecdn.com">
+    <script src="https://fedora.teachablecdn.com/packs/student-globals--af1387f3b11aa3704bd1.js"></script>
+    <script src="https://fedora.teachablecdn.com/packs/student-legacy--36e92ecf9ef7bc4d1a05.js"></script>
+    <script src="https://fedora.teachablecdn.com/packs/student--6651cfdd4d4f3a25431c.js"></script>
+
+    <link rel="stylesheet" href="https://codewithmosh-assets.netlify.app/styles.8986bff4.css?v=1"/>
+
+    <!-- Google Tag Manager -->
+    <!--    <script>(function (w, d, s, l, i) {-->
+    <!--        w[l] = w[l] || [];-->
+    <!--        w[l].push({-->
+    <!--            'gtm.start':-->
+    <!--                new Date().getTime(), event: 'gtm.js'-->
+    <!--        });-->
+    <!--        var f = d.getElementsByTagName(s)[0],-->
+    <!--            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';-->
+    <!--        j.async = true;-->
+    <!--        j.src =-->
+    <!--            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;-->
+    <!--        f.parentNode.insertBefore(j, f);-->
+    <!--    })(window, document, 'script', 'dataLayer', 'GTM-TJ6Q5ZZ');</script>-->
+    <!-- End Google Tag Manager -->
+
+
+    <!-- Global site tag (gtag.js) - Google Ads: 961214977 -->
+    <!--    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-961214977"></script>-->
+    <!--    <script>-->
+    <!--        window.dataLayer = window.dataLayer || [];-->
+
+    <!--        function gtag() {-->
+    <!--            dataLayer.push(arguments);-->
+    <!--        }-->
+
+    <!--        gtag('js', new Date());-->
+
+    <!--        gtag('config', 'AW-961214977');-->
+    <!--        gtag('config', 'UA-66465936-2', {-->
+    <!--            'linker': {-->
+    <!--                'domains': ['codewithmosh.com', 'teachable.com', 'programmingwithmosh.com']-->
+    <!--            }-->
+    <!--        });-->
+    <!--        gtag('config', 'UA-107342491-1', {'optimize_id': 'GTM-MMDJGCK'});-->
+    <!--    </script>-->
+
+
+    <!-- ActiveCampaign -->
+    <!--    <script type="text/javascript">-->
+    <!--        // Set to false if opt-in required-->
+    <!--        var trackByDefault = true;-->
+
+    <!--        function acEnableTracking() {-->
+    <!--            var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);-->
+    <!--            document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";-->
+    <!--            acTrackVisit();-->
+    <!--        }-->
+
+    <!--        function acTrackVisit() {-->
+    <!--            var trackcmp_email = '';-->
+    <!--            var trackcmp = document.createElement("script");-->
+    <!--            trackcmp.async = true;-->
+    <!--            trackcmp.type = 'text/javascript';-->
+    <!--            trackcmp.src = '//trackcmp.net/visit?actid=89545604&e=' + encodeURIComponent(trackcmp_email) + '&r=' + encodeURIComponent(document.referrer) + '&u=' + encodeURIComponent(window.location.href);-->
+    <!--            var trackcmp_s = document.getElementsByTagName("script");-->
+    <!--            if (trackcmp_s.length) {-->
+    <!--                trackcmp_s[0].parentNode.appendChild(trackcmp);-->
+    <!--            } else {-->
+    <!--                var trackcmp_h = document.getElementsByTagName("head");-->
+    <!--                trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);-->
+    <!--            }-->
+    <!--        }-->
+
+    <!--        if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {-->
+    <!--            acEnableTracking();-->
+    <!--        }-->
+    <!--    </script>-->
+    <!-- End of ActiveCampaign -->
+
+    <!-- Deadline Funnel -->
+    <!--    <script type="text/javascript" data-cfasync="false">function SendUrlToDeadlineFunnel(e) {-->
+    <!--        var r, t, c, a, h, n, o, A, i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", d = 0,-->
+    <!--            l = 0, s = "", u = [];-->
+    <!--        if (!e) return e;-->
+    <!--        do r = e.charCodeAt(d++), t = e.charCodeAt(d++), c = e.charCodeAt(d++), A = r << 16 | t << 8 | c, a = A >> 18 & 63, h = A >> 12 & 63, n = A >> 6 & 63, o = 63 & A, u[l++] = i.charAt(a) + i.charAt(h) + i.charAt(n) + i.charAt(o); while (d < e.length);-->
+    <!--        s = u.join("");-->
+    <!--        var C = e.length % 3;-->
+    <!--        var decoded = (C ? s.slice(0, C - 3) : s) + "===".slice(C || 3);-->
+    <!--        decoded = decoded.replace("+", "-");-->
+    <!--        decoded = decoded.replace("/", "_");-->
+    <!--        return decoded;-->
+    <!--    }-->
+
+    <!--    var dfUrl = SendUrlToDeadlineFunnel(location.href);-->
+    <!--    var dfParentUrlValue;-->
+    <!--    try {-->
+    <!--        dfParentUrlValue = window.parent.location.href;-->
+    <!--    } catch (err) {-->
+    <!--        if (err.name === "SecurityError") {-->
+    <!--            dfParentUrlValue = document.referrer;-->
+    <!--        }-->
+    <!--    }-->
+    <!--    var dfParentUrl = (parent !== window) ? ("/" + SendUrlToDeadlineFunnel(dfParentUrlValue)) : "";-->
+    <!--    (function () {-->
+    <!--        var s = document.createElement("script");-->
+    <!--        s.type = "text/javascript";-->
+    <!--        s.async = true;-->
+    <!--        s.setAttribute("data-scriptid", "dfunifiedcode");-->
+    <!--        s.src = "https://a.deadlinefunnel.com/unified/reactunified.bundle.js?userIdHash=eyJpdiI6Im8yUUtxVmgxYmlxOEw5V2s2UTVFQnc9PSIsInZhbHVlIjoiT1JOM3ZlNW5aSUJcL1lhNERUeHVLRUE9PSIsIm1hYyI6IjllYmM2ZDQ4ZmQxYWRhMDE5M2UzMWM2MDNiMmQ4ZTY0MzljNjQwNTIzZDM0NTY1OTNmYTA5M2E0Y2M3YTIwZGYifQ==&pageFromUrl=" + dfUrl + "&parentPageFromUrl=" + dfParentUrl;-->
+    <!--        var s2 = document.getElementsByTagName("script")[0];-->
+    <!--        s2.parentNode.insertBefore(s, s2);-->
+    <!--    })();</script>&lt;!&ndash; End Deadline Funnel &ndash;&gt;-->
+
+    <script src="https://my.hellobar.com/b9e58eff724f913d2339258027a6c7874805fbbe.js" type="text/javascript"
+            charset="utf-8" async="async"></script>
+
+
+    <!--    <script>-->
+    <!--        if (typeof ga != 'function') {-->
+    <!--            (function (i, s, o, g, r, a, m) {-->
+    <!--                i['GoogleAnalyticsObject'] = r;-->
+    <!--                i[r] = i[r] || function () {-->
+    <!--                    (i[r].q = i[r].q || []).push(arguments)-->
+    <!--                }, i[r].l = 1 * new Date();-->
+    <!--                a = s.createElement(o),-->
+    <!--                    m = s.getElementsByTagName(o)[0];-->
+    <!--                a.async = 1;-->
+    <!--                a.src = g;-->
+    <!--                m.parentNode.insertBefore(a, m)-->
+    <!--            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');-->
+    <!--        }-->
+    <!--        ga('create', 'UA-44397410-1', 'auto', {'name': 'fedoraTracker', 'allowLinker': true});-->
+    <!--        ga('fedoraTracker.set', 'anonymizeIp', false);-->
+    <!--        ga('fedoraTracker.require', 'linker');-->
+    <!--        ga('fedoraTracker.linker:autoLink', ['codewithmosh.com', 'sso.teachable.com'], false, true);-->
+    <!--        ga('fedoraTracker.require', 'ecommerce');-->
+    <!--        ga('fedoraTracker.require', 'ec');-->
+    <!--        ga('fedoraTracker.send', 'pageview');-->
+    <!--        ga('create', 'UA-44397410-4', 'auto', {'name': 'teachableTracker', 'allowLinker': true});-->
+    <!--        ga('teachableTracker.set', 'anonymizeIp', false);-->
+    <!--        ga('teachableTracker.require', 'linker');-->
+    <!--        ga('teachableTracker.linker:autoLink', ['codewithmosh.com', 'sso.teachable.com'], false, true);-->
+    <!--        ga('teachableTracker.require', 'ecommerce');-->
+    <!--        ga('teachableTracker.require', 'ec');-->
+    <!--        ga('teachableTracker.send', 'pageview');-->
+    <!--    </script>-->
+
+    <meta id='iris-url' data-iris-url=https://eventable.teachable.cloud/>
+    <script type="text/javascript">
+        window.heap = window.heap || [], heap.load = function (e, t) {
+            window.heap.appid = e, window.heap.config = t = t || {};
+            var r = document.createElement("script");
+            r.type = "text/javascript", r.async = !0, r.src = "https://cdn.heapanalytics.com/js/heap-" + e + ".js";
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(r, a);
+            for (var n = function (e) {
+                return function () {
+                    heap.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }, p = ["addEventProperties", "addUserProperties", "clearEventProperties", "identify", "resetIdentity", "removeEventProperty", "setEventProperties", "track", "unsetEventProperty"], o = 0; o < p.length; o++) heap[p[o]] = n(p[o])
+        }, heap.load("318805607");
+    </script>
+
+
+    <!--    <script type="text/javascript">-->
+    <!--        var _user_id = ''; // Set to the user's ID, username, or email address, or '' if not yet known.-->
+    <!--        var _session_id = '31d176dc848114d9131461caf86e1993'; // Set to a unique session ID for the visitor's current browsing session.-->
+
+    <!--        var _sift = window._sift = window._sift || [];-->
+    <!--        _sift.push(['_setAccount', 'b0151b2153']);-->
+    <!--        _sift.push(['_setUserId', _user_id]);-->
+    <!--        _sift.push(['_setSessionId', _session_id]);-->
+    <!--        _sift.push(['_trackPageview']);-->
+
+    <!--        (function () {-->
+    <!--            function ls() {-->
+    <!--                var e = document.createElement('script');-->
+    <!--                e.src = 'https://cdn.sift.com/s.js';-->
+    <!--                document.body.appendChild(e);-->
+    <!--            }-->
+
+    <!--            if (window.attachEvent) {-->
+    <!--                window.attachEvent('onload', ls);-->
+    <!--            } else {-->
+    <!--                window.addEventListener('load', ls, false);-->
+    <!--            }-->
+    <!--        })();-->
+    <!--    </script>-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJ6Q5ZZ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<meta http-content='IE=Edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width,initial-scale=1.0,user-scalable=no' name='viewport'>
+<meta id="fedora-keys" data-commit-sha="53f6dccfab719c8e2b012f98d57b6d2e7b1eddab" data-env="production"
+      data-sentry-public-dsn="https://8149a85a83fa4ec69640c43ddd69017d@sentry.io/120346"
+      data-stripe="pk_live_hkgvgSBxG4TAl3zGlXiB1KUX" data-track-all-ahoy="false" data-track-changes-ahoy="false"
+      data-track-clicks-ahoy="false" data-track-sumbits-ahoy="false" data-filepicker="ADNupMnWyR7kCWRvm76Laz"
+      data-iris-url="https://eventable.teachable.cloud"/>
+<meta id="fedora-data" data-report-card="{}" data-course-ids="[]" data-completed-lecture-ids="[]"
+      data-school-id="146684" data-school-launched="true" data-preview="logged_out" data-turn-off-fedora-branding="true"
+      data-plan-supports-whitelabeling="true" data-powered-by-text="Powered by"
+      data-asset-path="//https://fedora.teachablecdn.com/assets/footer/teachable-logomark-white-31d2296978598bacace50e6d48a2e1223c20a9b074af424acdd465676f81560f.svg"
+      data-school-preferences="{&quot;ssl_forced&quot;:&quot;true&quot;,&quot;bazaar_enabled&quot;:&quot;false&quot;,&quot;paypal_enabled&quot;:&quot;true&quot;,&quot;autoplay_lectures&quot;:&quot;true&quot;,&quot;comments_threaded&quot;:&quot;true&quot;,&quot;themeable_enabled&quot;:&quot;false&quot;,&quot;course_blocks_beta&quot;:&quot;true&quot;,&quot;eu_vat_tax_enabled&quot;:&quot;false&quot;,&quot;legacy_back_office&quot;:&quot;true&quot;,&quot;themeable_disabled&quot;:&quot;false&quot;,&quot;comments_moderation&quot;:&quot;false&quot;,&quot;eu_vat_tax_eligible&quot;:&quot;true&quot;,&quot;charge_exclusive_tax&quot;:&quot;true&quot;,&quot;drip_content_enabled&quot;:&quot;false&quot;,&quot;send_receipts_emails&quot;:&quot;true&quot;,&quot;autocomplete_lectures&quot;:&quot;true&quot;,&quot;class_periods_enabled&quot;:&quot;false&quot;,&quot;authors_can_manage_pbc&quot;:&quot;true&quot;,&quot;css_properties_enabled&quot;:&quot;false&quot;,&quot;preenrollments_enabled&quot;:&quot;false&quot;,&quot;native_comments_enabled&quot;:&quot;true&quot;,&quot;new_text_editor_enabled&quot;:&quot;true&quot;,&quot;require_terms_agreement&quot;:&quot;true&quot;,&quot;send_new_comment_emails&quot;:&quot;true&quot;,&quot;send_drip_content_emails&quot;:&quot;true&quot;,&quot;ssl_forced_from_creation&quot;:&quot;false&quot;,&quot;turn_off_fedora_branding&quot;:&quot;true&quot;,&quot;allow_comment_attachments&quot;:&quot;true&quot;,&quot;authors_can_email_students&quot;:&quot;false&quot;,&quot;authors_can_manage_coupons&quot;:&quot;false&quot;,&quot;teachable_accounts_enabled&quot;:&quot;true&quot;,&quot;teachable_payments_enabled&quot;:&quot;true&quot;,&quot;authors_can_import_students&quot;:&quot;false&quot;,&quot;authors_can_publish_courses&quot;:&quot;false&quot;,&quot;internal_subscriptions_beta&quot;:&quot;true&quot;,&quot;recaptcha_enabled_on_signup&quot;:&quot;true&quot;,&quot;tax_form_collection_enabled&quot;:&quot;false&quot;,&quot;display_vat_inclusive_prices&quot;:&quot;true&quot;,&quot;single_page_checkout_enabled&quot;:&quot;true&quot;,&quot;authors_can_set_course_prices&quot;:&quot;false&quot;,&quot;send_lead_confirmation_emails&quot;:&quot;true&quot;,&quot;affiliate_cookie_duration_days&quot;:&quot;365&quot;,&quot;authors_can_issue_certificates&quot;:&quot;false&quot;,&quot;store_student_cards_separately&quot;:&quot;true&quot;,&quot;affiliate_external_urls_enabled&quot;:&quot;true&quot;,&quot;authors_can_manage_certificates&quot;:&quot;false&quot;,&quot;authors_can_manage_course_pages&quot;:&quot;false&quot;,&quot;disable_js_course_event_tracking&quot;:&quot;false&quot;,&quot;exclusive_vat_on_custom_gateways&quot;:&quot;true&quot;,&quot;is_edit_site_onboarding_complete&quot;:&quot;false&quot;,&quot;send_certificate_issuance_emails&quot;:&quot;true&quot;,&quot;owner_teachable_accounts_required&quot;:&quot;true&quot;,&quot;prevent_payment_plan_cancellation&quot;:&quot;true&quot;,&quot;send_subscription_reminder_emails&quot;:&quot;true&quot;,&quot;automatically_add_disqus_attachments&quot;:&quot;true&quot;,&quot;recalc_course_pct_on_lecture_publish&quot;:&quot;false&quot;,&quot;send_confirmation_instructions_emails&quot;:&quot;true&quot;,&quot;send_limited_time_unenrollment_emails&quot;:&quot;true&quot;,&quot;turn_off_myteachable_sign_up_branding&quot;:&quot;false&quot;}"
+      data-accessible-features="[&quot;bulk_importing_users&quot;,&quot;bulk_enroll_students&quot;,&quot;manually_importing_users&quot;,&quot;native_certificates&quot;,&quot;custom_roles&quot;,&quot;earnings_statements&quot;,&quot;teachable_payments&quot;,&quot;teachable_u&quot;,&quot;course_compliance&quot;,&quot;page_editor_v2&quot;,&quot;certificates_editor_v2&quot;,&quot;drip_content&quot;,&quot;custom_domain&quot;,&quot;coupons&quot;,&quot;graded_quizzes&quot;,&quot;power_editor&quot;,&quot;email&quot;,&quot;course_reports&quot;,&quot;webhooks&quot;,&quot;integrations&quot;,&quot;zapier_action_create_user&quot;,&quot;teachable_payments_payout_view&quot;,&quot;upsells&quot;,&quot;facebook_pixel&quot;,&quot;user_search_filters&quot;,&quot;user_tags&quot;,&quot;multiple_course_pages&quot;,&quot;proration_upgrade_flow&quot;,&quot;cross_border_payments&quot;,&quot;limited_time_enrollments&quot;,&quot;sales_tax_on_student_checkout&quot;,&quot;new_device_confirmation&quot;,&quot;elasticsearch_users&quot;,&quot;elasticsearch_transactions&quot;,&quot;reset_progress&quot;,&quot;fraud_warnings&quot;,&quot;paypal_through_tp&quot;,&quot;new_creator_checkout&quot;,&quot;circle_oauth&quot;]"
+      data-course-data="{&quot;is_lecture_order_enforced&quot;:false,&quot;is_minimum_quiz_score_enforced&quot;:false,&quot;is_video_completion_enforced&quot;:false,&quot;minimum_quiz_score&quot;:0.0,&quot;maximum_quiz_retakes&quot;:0}"
+      data-course-url="https://codewithmosh.com/courses/1779784" data-course-id="1779784"/>
+<!--<meta id="analytics-keys" name="analytics"-->
+<!--      data-analytics="{&quot;Google Analytics&quot;:{&quot;trackingId&quot;:&quot;UA-66465936-2&quot;,&quot;enhancedEcommerce&quot;:true,&quot;sendUserId&quot;:true,&quot;schoolDomain&quot;:&quot;codewithmosh.com&quot;,&quot;anonymizeIp&quot;:true}}"/>-->
+
+
+<!-- HEADER -->
+<header class='v1-header'>
+    <!-- Navbar -->
+    <div
+            class="navbar navbar-fedora navbar-fixed-top is-at-top bs-docs-nav is-not-signed-in"
+            id='navbar'
+            role='navigation'>
+        <div class='container'>
+            <div class='navbar-header navbar-header-courses'>
+                <button class='navbar-toggle' data-target='.navbar-header-collapse' data-toggle='collapse'
+                        type='button'>
+          <span class='sr-only'>
+            Toggle navigation
+          </span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </button>
+                <!-- Site logo -->
+
+                <a class="navbar-brand header-logo" href="/">
+                    <img style="max-width: 25%" src="https://www.filepicker.io/api/file/9OxlMI8TjGM2W6ELElMd"
+                         alt="Code with Me"
+                         srcset="https://www.filepicker.io/api/file/9OxlMI8TjGM2W6ELElMd"/>
+
+                </a>
+
+                <!-- Header Menu -->
+                <div class='collapse navbar-collapse navbar-header-collapse'>
+                    <ul class='nav navbar-nav navbar-right'>
+
+                        <li>
+
+                            <a class='fedora-navbar-link navbar-link current-page' href='/courses' target=''>
+                                Courses
+                            </a>
+
+                        </li>
+
+
+                        <li>
+                            <a aria-expanded='false' aria-haspopup='true'
+                               class='fedora-navbar-link navbar-link dropdown-toggle' data-toggle='dropdown'>More <i
+                                    class="caret"></i> </a>
+                            <ul class='dropdown-menu'>
+
+                                <li>
+                                    <a href='/p/about' target=''>
+                                        About
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href='/p/contact' target=''>
+                                        Contact
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a class='navbar-link fedora-navbar-link' href='/login'>
+                                Login
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a class='btn btn-primary pull-right btn-lg' id='header-sign-up-btn' th:href="@{/register}">
+                                Sign Up
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div role="main" class='view-school'>
+
+
+    <div id="blocks" data-ss-school-id='146684' class="blocks-page blocks-page-course_sales_page ">
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block liquid_html  odd-stripe" id="block-99413381">
+
+
+            <!-- if no liquid block data saved we render a default state -->
+
+            <style>
+                .blank-template-body {
+                    color: #36414D;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    opacity: 0.6;
+                    width: 750px;
+                    text-align: left;
+                }
+            </style>
+
+
+            <div class="course-block block hero odd-stripe" id="block-13130792">
+
+                g
+
+                <div class="course-top-row has-hero-image"
+                     style="background:url(
+                     &quot;https://www.filepicker.io/api/file/4pwDDXkTdFPzLDrX7Egc&quot;
+                     );">
+                    <div class="black-overlay" style="opacity: 0.0;">&nbsp;</div>
+
+                    <div class="container">
+                        <div class="row">
+                            <!-- Course Video/Image -->
+
+                            <div class="col-md-5 course-splash-media">
+                                <div class="img-rounded">
+                                    <img src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/t12BZqmRoulvCTDhoYie"
+                                         alt="T12bzqmroulvctdhoyie">
+                                </div>
+                            </div>
+                            <div class="col-md-6 course-header-container">
+
+                                <h1 th:text="${course.getName()}" class="course-title">
+
+                                </h1>
+                                <h2 th:text="${course.getHeadline()}" class="course-subtitle">
+                                </h2>
+
+                                <!-- Embeds a button that will go to checkout if the course has only a single product,
+        or scroll to the product select form if there is more than one product -->
+                                <form accept-charset="UTF-8" action="/purchase" class="sale_default" id="sale_default2"
+                                      method="get">
+                                    <input type="hidden" name="authenticity_token"
+                                           value="C4AH5htpP/6Wj2KiQVuI4d9FDhMPBSTsrlcMH+Z6hQokADHP023R3HiMbAi9kMpbvLJSPOEdNU4pm45CuBq1pg==">
+                                    <input type="hidden" name="utf8" value="✓">
+                                    <input type="hidden" name="course_id" value="606250" id="course_id">
+                                    <input type="hidden" name="coupon_code" value="INTERIM" id="coupon_code">
+                                    <input type="hidden" name="school_domain" value="https://codewithmosh.com"
+                                           id="school_domain">
+                                    <input type="hidden" name="product_id" value="1242254" id="product_id">
+                                    <input type="hidden" name="user_src" value="" id="user_src">
+                                    <a id="enroll-button" class="btn btn-hg btn-primary btn-enroll payment-scroller">
+                                        <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;
+                                        Enroll Now!
+                                    </a>
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <!-- Pre-enrollment Form -->
+
+                    </div>
+                </div>
+
+                <!-- Watch promo modal -->
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block liquid_html  even-stripe" id="block-99413382">
+
+
+            <!-- if no liquid block data saved we render a default state -->
+
+            <style>
+                .blank-template-body {
+                    color: #36414D;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    opacity: 0.6;
+                    width: 750px;
+                    text-align: left;
+                }
+            </style>
+
+
+            <div class="sales-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Go from Beginner to Pro</h2>
+                            <p th:text="${course.getDescription()}">
+
+                            </p>
+                            <p>
+                                <a
+                                        id="enroll-button-top"
+                                        class="btn btn-hg btn-primary btn-header-enroll payment-scroller"
+                                ><i class="fa fa-shopping-cart"></i> Enroll Now!</a
+                                >
+                            </p>
+                        </div>
+                        <div class="col-md-offset-1 col-md-5">
+                            <div class="features">
+                                <ul>
+                                    <li>
+                                        <div class="glyphicon glyphicon-stats"></div>
+                                        Beginner to Pro
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon-bell"></div>
+                                        Lifetime Access
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon-time"></div>
+                                        5 Hours of Video
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon-facetime-video"></div>
+                                        120+ Lessons
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon glyphicon-align-justify"></div>
+                                        Exercises
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon-cloud-download"></div>
+                                        Downloadable
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon-globe"></div>
+                                        Subtitles
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon-phone"></div>
+                                        Access on Mobile/TV
+                                    </li>
+                                    <li>
+                                        <div class="glyphicon glyphicon-certificate"></div>
+                                        Certificate
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block video_embed  odd-stripe" id="block-99413383">
+
+
+            <!--            <div class="row">-->
+            <!--                <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-center">-->
+
+            <!--                    <h2>Beginner to Pro</h2>-->
+
+
+            <!--                    <p>A comprehensive, fun and highly-practical course that prepares you for the job</p>-->
+            <!--                    <br>-->
+
+            <!--                    <center>-->
+            <!--                        <div class='wistia_responsive_padding'>-->
+            <!--                            <div class='wistia_responsive_wrapper'>-->
+            <!--                                <div class='video-asset-wistia-player stillSnap=false wistia_embed'-->
+            <!--                                     data-wistia-id='doau8t7nw7' id='wistia-doau8t7nw7'-->
+            <!--                                     data-still-url='https://www.filepicker.io/api/file/ZexKnPKFRdOPGaanSaES'>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </center>-->
+            <!--                </div>-->
+            <!--            </div>-->
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block rich_text  even-stripe" id="block-99413384">
+
+
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 course-description'>
+
+                        <h2>By the end of this course, you'll be able to…</h2>
+                        <ul th:each="skill : ${course.getLearningSkills().split('\n')}"
+                            class="outcomes optimized-padding-left">
+                            <li th:text="${skill}"></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <!--        <div class="course-block block rich_text  odd-stripe" id="block-99413385">-->
+
+
+        <!--            <div class='container'>-->
+        <!--                <div class='row'>-->
+        <!--                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 course-description'>-->
+
+        <!--                        <h2>A step-by-step, beginner-friendly course</h2>-->
+        <!--                        <ul class="outcomes optimized-padding-left">-->
+        <!--                            <li>Gain a solid understanding of the TypeScript language and tools</li>-->
+        <!--                            <li>Learn all about classes, interfaces, and object-oriented programming with TypeScript-->
+        <!--                            </li>-->
+        <!--                            <li>Use generics to build re-usable types</li>-->
+        <!--                            <li>Create custom complex types</li>-->
+        <!--                            <li>Inject code using decorators</li>-->
+        <!--                            <li>Use TypeScript in React projects</li>-->
+        <!--                            <li>Use TypeScript in Node/Express projects</li>-->
+        <!--                            <li>Understand and troubleshoot confusing TypeScript errors</li>-->
+        <!--                            <li>Write modular code using modules</li>-->
+        <!--                            <li>Integrate with third-party JavaScript libraries</li>-->
+        <!--                            <li>Debug TypeScript code</li>-->
+        <!--                            <li>Customize the TypeScript compiler (tsconfig)</li>-->
+        <!--                            <li>Apply best practices</li>-->
+        <!--                            <li>And much, much more!</li>-->
+        <!--                        </ul>-->
+
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+
+        <!--        </div>-->
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block liquid_html  even-stripe" id="block-99413386">
+
+
+            <!-- if no liquid block data saved we render a default state -->
+
+            <style>
+                .blank-template-body {
+                    color: #36414D;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    opacity: 0.6;
+                    width: 750px;
+                    text-align: left;
+                }
+            </style>
+
+
+            <div class="x-salary-benefits x-right x-bg-yellow text-center">
+                <div class="container">
+                    <h3>A clear, concise, and perfectly-structured course with real-life examples, exercises, and
+                        solutions.</h3>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <!--        <div class="course-block block rich_text  odd-stripe" id="block-99413387">-->
+
+
+        <!--            <div class='container'>-->
+        <!--                <div class='row'>-->
+        <!--                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 course-description'>-->
+
+        <!--                        <h2>Who is this course for?</h2>-->
+        <!--                        <p>This course is for JavaScript developers who want to level-up their skills and use TypeScript-->
+        <!--                            to create large-scale web or mobile applications.-->
+        <!--                        </p>-->
+
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+
+        <!--        </div>-->
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block rich_text  even-stripe" id="block-99413388">
+
+
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 course-description'>
+
+                        <h2>Prerequisites</h2>
+
+                        <p th:text="${course.getRequirements()}"></p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <!--  /      <div class="course-block block bio  odd-stripe" id="block-99413389">-->
+
+
+        <!--            <div class='container'>-->
+        <!--                <div class='row'>-->
+        <!--                    <div class='col-xs-1 visible-xs'></div>-->
+        <!--                    <div class='col-lg-8 col-lg-offset-2 col-xs-10 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1'>-->
+        <!--                        <h2>-->
+        <!--                            Your Instructor-->
+        <!--                        </h2>-->
+        <!--                        <br>-->
+        <!--                        <div class='row'>-->
+        <!--                            <div class='col-lg-3 col-md-4 col-sm-4 text-center'>-->
+        <!--                                <img class='large-img-rounded img-responsive'-->
+        <!--                                     src='https://www.filepicker.io/api/file/su7jLanLRmmanlmn5RyO' alt='Mosh Hamedani'>-->
+        <!--                                <div class='author-name'>-->
+        <!--                                    Mosh Hamedani-->
+        <!--                                </div>-->
+        <!--                            </div>-->
+        <!--                            <div class='col-lg-9 col-md-8 col-sm-8'>-->
+        <!--                                <p>Hi! My name is Mosh Hamedani. I'm a software engineer with two decades of experience.-->
+        <!--                                    I've taught millions of people how to code and how to become professional software-->
+        <!--                                    engineers through my online courses and YouTube channel.-->
+        <!--                                </p>-->
+        <!--                                <p>I believe coding should be fun and accessible to everyone.-->
+        <!--                                </p>-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                        <br>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+
+        <!--        </div>-->
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block curriculum  even-stripe" id="block-62816558">
+
+
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2'>
+                        <h2>
+                            Course Curriculum
+                        </h2>
+                        <br>
+
+                        <div class='row'>
+                            <div class='col-sm-12 course-section'>
+                                <div class='section-title' data-release-date=""
+                                     data-days-until-dripped=""
+                                     data-is-dripped-by-date=""
+                                     data-course-id="1422300"
+                                     th:inline="text"
+
+                                >
+      <span class="section-lock">
+        <i class="fa fa-lock"></i>&nbsp;
+      </span>
+                                    [[${firstModuleName}]]
+
+
+                                    <div class="section-days-to-drip">
+                                        <div class="section-days-logged-in">
+                                            Available in
+                                            <span class="section-days-to-drip-number"></span>
+                                            days
+                                        </div>
+                                        <div class="section-days-logged-out">
+                                            <span class="section-days-to-drip-number"></span>
+                                            days
+                                            after you enroll
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul th:each="lesson : ${lessonsByFirstModule}" class='section-list'>
+
+                                    <li class='section-item'>
+                                        <a
+                                                class='item'
+                                                data-ss-event-name='Lecture: Start (Sales - PE v1)'
+                                                data-ss-event-type='button'
+                                                data-ss-user-id=''
+                                                th:href="@{'/courses/'+${course.getPathName()}+'/lectures/'+${lesson.getId()}}"
+                                                th:inline="text"
+                                        >
+          <span class='lecture-icon'>
+
+            <i class='fa fa-youtube-play'></i>
+          </span>
+
+                                            <div th:text="${lesson.isForPreview()} ? 'Preview' : 'Start'"
+                                                 class='btn-primary btn-sm pull-right lecture-preview'
+                                                 th:classappend="${lesson.isForPreview()} ?  'lecture-preview' : 'lecture-start'">
+                                                <!--                                                Preview-->
+                                            </div>
+                                            [[${lesson.getName()}]]
+
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <center>
+                            <a class="btn btn-default btn-sm collapsed" id="more_lecture_sections"
+                               data-toggle="collapse" data-target="#hidden_sections"><i class="fa fa-chevron-down"></i></a>
+                        </center>
+                        <div id="hidden_sections" class="collapse">
+
+                            <div class='row'>
+                                <div th:each="module : ${lessonsFromSecondModule}" class='col-sm-12 course-section'>
+                                    <div class='section-title' data-release-date=""
+                                         data-days-until-dripped=""
+                                         data-is-dripped-by-date=""
+                                         data-course-id="1422300"
+                                         th:inline="text"
+                                    >
+      <span class="section-lock">
+        <i class="fa fa-lock"></i>&nbsp;
+      </span>
+                                        [[${module.getName()}]]
+                                        <div class="section-days-to-drip">
+                                            <div class="section-days-logged-in">
+                                                Available in
+                                                <span class="section-days-to-drip-number"></span>
+                                                days
+                                            </div>
+                                            <div class="section-days-logged-out">
+                                                <span class="section-days-to-drip-number"></span>
+                                                days
+                                                after you enroll
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul th:each="lesson : ${module.getLessons()}" class='section-list'>
+
+                                        <li class='section-item'>
+                                            <a
+                                                    class='item'
+                                                    data-ss-event-name='Lecture: Start (Sales - PE v1)'
+                                                    data-ss-event-type='button'
+                                                    data-ss-user-id=''
+                                                    th:href="@{'/courses/'+${course.getPathName()}+'/lectures/'+${lesson.getId()}}"
+                                                    th:inline="text"
+                                            >
+          <span class='lecture-icon'>
+
+            <i class='fa fa-youtube-play'></i>
+          </span>
+
+                                                <div th:text="${lesson.isForPreview()} ? 'Preview' : 'Start'"
+                                                     class='btn-primary btn-sm pull-right lecture-preview'
+                                                     th:classappend="${lesson.isForPreview()} ?  'lecture-preview' : 'lecture-start'">
+                                                    <!--                                                Preview-->
+                                                </div>
+                                                [[${lesson.getName()}]]
+
+
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <!--        <div class="course-block block rich_text  odd-stripe" id="block-99413391">-->
+
+
+        <!--            <div class='container'>-->
+        <!--                <div class='row'>-->
+        <!--                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 course-description'>-->
+
+        <!--                        <div style="text-align:center;">-->
+        <!--                            <h1 class="big-title">30-Day Money-Back Guarantee</h1>-->
+        <!--                            <h2>Try it risk-free</h2>-->
+        <!--                            <p>You can ask for a refund any time during the first 30 days<br>if you decide the course-->
+        <!--                                isn’t for you.-->
+        <!--                            </p>-->
+        <!--                            <img src="https://d3gvvapon6fqzo.cloudfront.net/icons/checkout-badge-1.svg">-->
+        <!--                        </div>-->
+
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+
+        <!--        </div>-->
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block faq  even-stripe" id="block-99413392">
+
+
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2'>
+                        <h2>
+                            <i class='fa fa-question-circle'></i>
+                            Frequently Asked Questions
+                        </h2>
+                        <br>
+
+                        <div class='faq-question'>
+                            When does the course start and finish?
+                        </div>
+                        <div class='faq-answer'>
+                            The course starts now and never ends! It is a completely self-paced online course - you
+                            decide when you start and when you finish.
+                        </div>
+
+                        <div class='faq-question'>
+                            How long do I have access to the course?
+                        </div>
+                        <div class='faq-answer'>
+                            How does lifetime access sound? After enrolling, you have unlimited access to this course
+                            for as long as you like - across any and all devices you own.
+                        </div>
+
+                        <!--                        <div class='faq-question'>-->
+                        <!--                            What if I am unhappy with the course?-->
+                        <!--                        </div>-->
+                        <!--                        <div class='faq-answer'>-->
+                        <!--                            We would never want you to be unhappy! If you are unsatisfied with your purchase, contact us-->
+                        <!--                            in the first 30 days and we will give you a full refund.-->
+                        <!--                        </div>-->
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block rich_text  odd-stripe" id="block-99413393">
+
+
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 course-description'>
+
+                        <div class="align-center cta">
+                            <h2>Everything you need to master TypeScript in one course</h2>
+                            <p>Here's what you get when you enroll:
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="outcomes optimized-padding-left">
+                                    <li>5 hours of HD videos</li>
+                                    <li>120+ lessons</li>
+                                    <li>Exercises and solutions</li>
+                                    <li>Little-known expert tips</li>
+                                    <li>Cheat sheets</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="outcomes optimized-padding-left">
+                                    <li>Lifetime access</li>
+                                    <li>Learn at your own pace</li>
+                                    <li>Watch online or offline</li>
+                                    <li>Watch on any device</li>
+                                    <li>Certificate of completion</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <!-- in live preview mode we add an extra wrapper around each block, and remove the `block.show` check -->
+
+
+        <div class="course-block block liquid_html  even-stripe" id="block-99413394">
+
+
+            <!-- if no liquid block data saved we render a default state -->
+
+            <style>
+                .blank-template-body {
+                    color: #36414D;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    opacity: 0.6;
+                    width: 750px;
+                    text-align: left;
+                }
+            </style>
+
+
+            <div class="x-enroll x-right">
+                <div class="container" id="pricing-options">
+                    <div class="x-section-heading">
+                        <h2>TypeScript Skills are in High Demand</h2>
+                        <p>Don’t waste your time on random, disconnected YouTube tutorials or long, boring,
+                            poorly-structured courses.</p>
+                        <p>Enroll now to quickly learn all the essential TypeScript skills you need to become an
+                            in-demand developer.</p>
+
+                    </div>
+                    <div class="x-flex x-card-wrapper">
+                        <div class="x-card text-center">
+                            <div class="x-card-header">
+                                <strong class="x-card-title">Buy the Complete Course</strong>
+                                <p>Own it forever!</p>
+                            </div>
+                            <div class="x-card-price">
+                                <strong class="x-price the-price">$29 <s>$149</s></strong>
+
+                                <div>
+                                    <strong>Instant access!</strong>
+                                </div>
+                            </div>
+                            <a href="https://sso.teachable.com/secure/146684/checkout/4032234/the-ultimate-typescript?coupon_code=SITE"
+                               class="btn btn-primary btn-purchase">Buy
+                                Now</a>
+                        </div>
+                        <div class="x-card x-popular text-center">
+                            <div class="x-card-header">
+                                <strong class="x-card-title">All-Access Membership</strong>
+                                <p>All existing and future courses</p>
+                            </div>
+                            <div class="x-card-price">
+                                <strong class="x-price">$29/mo</strong>
+                                <strong>Cancel anytime!</strong>
+                            </div>
+                            <a href="https://sso.teachable.com/secure/146684/checkout/2954151/all-access"
+                               class="btn btn-primary">Subscribe
+                                &amp; Save</a>
+                            <span class="x-stiker">Most-popular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <footer class='bottom-menu bottom-menu-inverse'>
+        <div class='container'>
+
+            <div class="cwm-social-icons">
+                <a href="/" target="_blank"
+                ><img src="https://cdn.fs.teachablecdn.com/yho35aJlSICjNd8Pe6Zk" height="35"
+                /></a>
+                <a href="/" target="_blank"
+                ><img src="https://cdn.fs.teachablecdn.com/YjXpg90MTCWsPzj9TI3g" height="35"
+                /></a>
+                <a href="/" target="_blank"
+                ><img src="https://cdn.fs.teachablecdn.com/d0LbDKI1SKq7DjycxGA4" height="35"
+                /></a>
+            </div>
+
+
+            <div class='row'>
+                <div class='col-xs-12 col-sm-4 col-md-4 footer-column'>
+                    <p>
+                        &copy;
+                        Code with Mosh
+                        2022
+                    </p>
+                </div>
+                <div class='col-xs-12 col-sm-4 col-md-4 footer-column'>
+                    <ul class='list-unstyled'>
+                        <li>
+                            <a href="/p/terms">
+                                Terms of Use
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/p/privacy">
+                                Privacy Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class='col-xs-12 col-sm-4 col-md-4 footer-column'>
+
+
+                </div>
+
+            </div>
+        </div>
+</div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <script src="https://fedora.teachablecdn.com/packs/identity--e4101b4f901475cc30b3.js"></script>
+
+
+    <link rel="stylesheet" media="all" href="https://fedora.teachablecdn.com/packs/identity-f3bb3a430871d0885ba5.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://themes2.teachablecdn.com/themecss/production/base.css?_=d31f5565c381&amp;brand_course_heading=%23ffffff&amp;brand_heading=%23191919&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23707070&amp;brand_navbar_text=%23707070&amp;brand_primary=%23ffffff&amp;brand_secondary=%23CB46D3&amp;brand_text=%234d4d4d&amp;logged_out_homepage_background_image_overlay=0.0&amp;logged_out_homepage_background_image_url=https%3A%2F%2Fwww.filepicker.io%2Fapi%2Ffile%2F6zhFyn86QRiFf5LTgQ0F"/>
+    <style type='text/css'>:root {
+        --brand_primary: #ffffff;
+        --brand_secondary: #CB46D3;
+        --brand_heading: #191919;
+        --brand_text: #4d4d4d;
+        --brand_navbar_text: #707070;
+        --brand_navbar_fixed_text: #707070;
+        --brand_homepage_heading: #ffffff;
+        --brand_course_heading: #ffffff;
+        --brand_video_player_color: #CB46D3;
+        --font_family: Proxima;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        font-style: italic;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        font-weight: 300;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        font-weight: 600;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        font-weight: 600;
+        font-style: italic;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        font-weight: bold;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        font-weight: bold;
+        font-style: italic;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: & #39;
+        Proxima & #39;;
+        font-weight: 900;
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.eot?1307578394&quot;);
+        src: url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.eot?iefix&quot;) format(& quot;
+        eot & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.woff?1307578394&quot;) format(&quot;
+        woff & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.ttf?1307578394&quot;) format(&quot;
+        truetype & quot;), url(&quot;//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.svg#webfont2rpW2ohz&quot;) format(&quot;
+        svg & quot;);
+        font-display: swap;
+    }
+    </style>
+</head>
+
+<body class="dsp-flex-xs flex-direction-column identity-layout">
+<header class="dsp-flex-xs flex-justify-content-center-xs navbar-fedora">
+    <a class="navbar-brand header-logo" href="/">
+        <div style="display: flex;justify-content: center">        <img style="max-width: 25%" src="https://www.filepicker.io/api/file/9OxlMI8TjGM2W6ELElMd"
+                                                                        alt="Code with me"
+                                                                        srcset="https://www.filepicker.io/api/file/9OxlMI8TjGM2W6ELElMd"/>
+        </div>
+    </a>
+</header>
+<main class="p-v-5-m">
+
+    <div class="container m-auto-xs col-4-l col-5-m col-10-xs p-h-6-l">
+        <h3 class="heading3 text-center-xs">Login</h3>
+
+        <form class="recaptcha-protected password-form" action="/login" accept-charset="UTF-8" method="post">
+            <!--            <input name="utf8" type="hidden" value="&#x2713;"/><input type="hidden" name="authenticity_token"-->
+            <!--                                                                      value="WuHLeTqd04q7rA7m6sYMxi8KP7QTBD7o/ICsbIGNCaoTgC49moIws/8hKNVMNchlojKLO+sTP0uDhaEsOWyiyg=="/>-->
+            <div class="m-b-4-xs">
+                <label class="form-label bodyMain p-b-0-xs m-b-2-xs" for="email">Email</label>
+                <input type="email" name="email" id="email" required="required" autocomplete="email"
+                       class="form-input p-v-1-xs p-l-2-xs p-r-4-xs col-12-xs bodyMain"/>
+            </div>
+
+            <div class="m-b-4-xs">
+                <label class="form-label bodyMain p-b-0-xs m-b-2-xs" for="password">Password</label>
+                <div class="password-container">
+                    <input type="password" name="password" id="password" value="" required="required"
+                           autocomplete="current-password"
+                           class="password form-input p-v-1-xs p-l-2-xs p-r-4-xs col-12-xs bodyMain"/>
+                    <svg width="16" height="16" class="icon-e" id="icon-e">
+                        <use xlink:href="#icon__Eye"></use>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="dsp-flex-xs m-b-1-xs flex-justify-content-space-between-xs">
+                <div class="m-b-4-xs">
+                    <input type="hidden" name="remember_me" value="0"/>
+                    <input type="checkbox" name="remember_me" id="remember_me" value="1" class="m-l-0-xs"
+                           checked="checked"/>
+                    <label class="v-middle form-footer obsidian bodySmall" for="remember_me">Remember Me</label>
+                </div>
+                <div>
+                    <a class="bodySmall form-footer" href="/secure/146684/identity/forgot_password">Forgot Password</a>
+                </div>
+            </div>
+
+            <div class="dsp-flex-xs flex-justify-content-center-xs">
+                <input type="submit" name="commit" value="Login"
+                       class="btn-primary button p-v-2-xs p-h-5-xs m-v-3-xs col-12-xs" data-testid="login-button"
+                       data-disable-with="Login"/>
+            </div>
+
+            <div data-testid="create-account-footer" class="bodyMain text-center-xs m-b-5-xs">Need an account? <a
+                    href="/register">Sign Up</a></div>
+
+            <!--            <div class="g-recaptcha-v3" data-action="login_check_password" data-sitekey-v3="6Le9jOUUAAAAAMKU_R7rTbi4JFAi6FXIhG5aBRHx"></div>-->
+
+        </form>
+
+        <hr class="col-12-xs m-b-3-xs"/>
+
+        <!--        <div class="dsp-flex-xs flex-justify-content-center-xs">-->
+        <!--            <form class="m-t-3-xs col-12-xs" action="/secure/146684/identity/login/oauth/teachable/start" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="adKPvKzqaL2bQRR4oMHUh1qUj/vu7VGu2+8qg1+ch4kgs2r4DPWLhN/MMksGMhAk16w7dBb6UA2k6ifD530s6Q==" />-->
+        <!--                <button name="button" type="submit" class="button oauth-button col-12-xs m-b-6-xs dsp-flex-xs flex-align-items-center-xs flex-justify-content-center-xs" data-test-id="login-with-teachable">-->
+        <!--                    <img role="presentation" src="https://fedora.teachablecdn.com/assets/teachable-circle-green-8747bce39a92fe2e2e76faed853d5195d1104b65ca3835ddecb78dfb18336953.svg" />-->
+        <!--                    Login with Teachable-->
+        <!--                </button></form>  </div>-->
+
+
+    </div>
+</main>
+
+<script>window.addEventListener("load", () => {
+    window.userAuthControllers.identity.initialize();
+})</script>
+
+<footer class="text-center-xs">
+    &copy;
+    Code with Nuriddin
+    2022
+</footer>
